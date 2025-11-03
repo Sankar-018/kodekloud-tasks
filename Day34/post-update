@@ -1,0 +1,9 @@
+sudo tee post-update > /dev/null << 'EOF'
+#!/bin/sh
+# post-update hook to create a daily release tag when master branch is updated
+
+if [ "$1" = "refs/heads/master" ]; then
+  echo "Creating release tag..."
+  git tag "release-$(date '+%Y-%m-%d')" master
+fi
+EOF
