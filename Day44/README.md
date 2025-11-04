@@ -61,7 +61,7 @@ services:
   webserver:
     image: httpd:latest
     container_name: httpd
-    ports:
+    ports: 
       - "3003:80"
     volumes:
       - /opt/finance:/usr/local/apache2/htdocs
@@ -127,6 +127,3 @@ sudo docker compose down
 
 ---
 
-## 👨‍💻 Maintained By
-**Nautilus DevOps Team**  
-*Stratos Datacenter*
