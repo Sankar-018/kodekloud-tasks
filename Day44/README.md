@@ -53,7 +53,6 @@ cd /opt/docker
 sudo vi /opt/docker/docker-compose.yml
 ```
 
-Paste the following content 👇
 
 ```yaml
 version: '3.8'
