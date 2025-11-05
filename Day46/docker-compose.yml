@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  web:
+    container_name: php_host
+    image: php:apache
+    ports:
+      - "8082:80"
+    volumes:
+      - /var/www/html:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    container_name: mysql_host
+    image: mariadb:latest
+    ports:
+      - "3306:3306"
+    volumes:
+      - /var/lib/mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: database_host
+      MYSQL_USER: nautilus_user
+      MYSQL_PASSWORD: N@ut1lusP@ssw0rd
+      MYSQL_ROOT_PASSWORD: RootTempPass123
