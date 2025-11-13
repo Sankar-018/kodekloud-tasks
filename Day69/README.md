@@ -4,29 +4,30 @@ Task : The Nautilus DevOps team has recently setup a Jenkins server, which they 
 
 2. Once logged in, install the Git and GitLab plugins. Note that you may need to restart Jenkins service to complete the plugins installation. If required, opt to Restart Jenkins when installation is complete and no jobs are running on plugin installation/update page (update centre).
 
-    Note:
+Note:
 
-        After restarting the Jenkins service, wait for the Jenkins login page to reappear before proceeding.
-        For tasks involving web UI changes, capture screenshots to share for review or consider using screen recording software like loom.com for documentation and sharing.
+After restarting the Jenkins service, wait for the Jenkins login page to reappear before proceeding.
+For tasks involving web UI changes, capture screenshots to share for review or consider using screen recording software like loom.com for documentation and sharing.
 
 
 Solution
 
-# 1) Access the Jenkins UI
-# Open your browser and go to: http://jenkins.stratos.xfusioncorp.com:8080
-# Login with:
-#   Username: admin
-#   Password: Adm!n321
+1) Access the Jenkins UI
+Open your browser and go to: http://jenkins.stratos.xfusioncorp.com:8080
+Login with:
+Username: admin
+Password: Adm!n321
 
-# 2) Install Git and GitLab plugins
-# - Click "Manage Jenkins" in the left sidebar
-# - Click "Manage Plugins"
-# - Go to the "Available" tab
-# - Search for "Git" and select "Git plugin"
-# - Search for "GitLab" and select "GitLab plugin"
-# - Click "Install without restart" (or "Download now and install after restart")
 
-# 3) If prompted, restart Jenkins after installation
-# - Click "Restart Jenkins when installation is complete and no jobs are running"
-# - Wait for Jenkins to restart and the login page to reappear
+2) Install Git and GitLab plugins
+- Click "Manage Jenkins" in the left sidebar
+- Click "Manage Plugins"
+- Go to the "Available" tab
+- Search for "Git" and select "Git plugin"
+- Search for "GitLab" and select "GitLab plugin"
+- Click "Install without restart" (or "Download now and install after restart")
+
+
+3) If prompted, restart Jenkins after installation - Click "Restart Jenkins when installation is complete and no jobs are running"
+- Wait for Jenkins to restart and the login page to reappear
 
