@@ -43,16 +43,21 @@ SCM: GIT
 Add Repository URL
 Build Steps:
 Shell Execute, and add this line:
+
+```bash
 sshpass -p "Bl@kW" scp -r -o StrictHostKeyChecking=no ./* natasha@ststor01:/var/www/html
+
+```
 
 Create Another Job: manage-services
 job name: manage-services
 Build Steps: create 3 build steps of Send or Execute shell over the SSH
 For each build step, select each app servers and execution command:
 
+```bash
 echo 'app-server-password' | sudo -S systemctl restart httpd
 
-
+```
 
 Now build nautilus-app-deployment job, once it build successfully manage-services will start building automatically.
 
