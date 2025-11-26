@@ -1,0 +1,8 @@
+- name: Create a file in App Server 1
+  hosts: stapp01
+  tasks:
+    - name: Create an empty file
+      ansible.builtin.file:
+        path: /tmp/file.txt
+        state: touch
+        
