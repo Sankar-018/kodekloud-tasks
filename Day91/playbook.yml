@@ -1,0 +1,29 @@
+- name: Setup httpd and index page
+  hosts: all
+  become: true
+  tasks:
+    - name: Install httpd
+      dnf:
+        name: httpd
+        state: present
+
+    - name: Start and enable httpd
+      service:
+        name: httpd
+        state: started
+        enabled: true
+
+    - name: Create index.html with base content
+      copy:
+        dest: /var/www/html/index.html
+        content: "This is a Nautilus sample file, created using Ansible!\n"
+        mode: '0744'
+        owner: apache
+        group: apache
+
+    - name: Add welcome line at top
+      lineinfile:
+        path: /var/www/html/index.html
+        insertbefore: BOF
+        line: 'Welcome to xFusionCorp Industries!'
+        create: no
