@@ -1,0 +1,10 @@
+- name: Copy Files with Ownership
+  hosts: app_servers
+  tasks:
+    - name: Copy files to each server
+      ansible.builtin.file:
+        path: /tmp/appdata.txt
+        state: touch
+        owner: '{{ ansible_user }}'
+        group: '{{ ansible_user }}'
+        mode: '0655'
